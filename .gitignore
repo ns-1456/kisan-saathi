@@ -1,0 +1,179 @@
+# Kisan Saathi - Git Configuration
+
+## .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+kisan-env/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ML Models (large files)
+models/base/
+models/finetuned/
+models/quantized/
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.tflite
+
+# Datasets (large files)
+data/raw/
+data/processed/
+*.csv
+*.jsonl
+*.parquet
+
+# Vector stores
+vector_store/
+*.index
+*.faiss
+
+# Weights & Biases
+wandb/
+
+# AWS credentials
+.aws/
+aws-credentials.json
+
+# Kaggle API
+.kaggle/
+
+# Jupyter notebook outputs
+*.ipynb
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Checkpoints
+checkpoints/
+*.ckpt
+
+# Evaluation results (keep structure, ignore large files)
+evaluation/*.json
+evaluation/*.png
+evaluation/*.jpg
+!evaluation/README.md
+
+# Deployment artifacts (keep structure)
+deployment/*.bin
+deployment/*.safetensors
+deployment/*.gguf
+deployment/*.onnx
+deployment/*.tflite
+!deployment/README.md

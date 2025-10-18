@@ -1,0 +1,107 @@
+# Kisan Saathi - Project Configuration
+
+## Model Configuration
+
+### Base Model Settings
+```yaml
+base_model:
+  name: "google/gemma-2b-it"  # Default choice
+  alternatives:
+    - "meta-llama/Llama-3.2-1B-Instruct"
+    - "bigscience/bloomz-1b7"
+  max_length: 1024
+  temperature: 0.7
+  top_p: 0.9
+```
+
+### LoRA Configuration
+```yaml
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+    - "k_proj"
+    - "o_proj"
+  bias: "none"
+  task_type: "CAUSAL_LM"
+```
+
+### Training Configuration
+```yaml
+training:
+  learning_rate: 2e-4
+  batch_size: 4
+  gradient_accumulation_steps: 4
+  num_epochs: 3
+  warmup_steps: 100
+  logging_steps: 50
+  save_steps: 500
+  eval_steps: 1000
+  bf16: true
+```
+
+### Quantization Settings
+```yaml
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+```
+
+### RAG Configuration
+```yaml
+rag:
+  embedding_model: "paraphrase-multilingual-mpnet-base-v2"
+  vector_store: "faiss"
+  retrieval_k: 5
+  similarity_threshold: 0.5
+  max_context_length: 512
+```
+
+### CNN Configuration
+```yaml
+cnn:
+  model: "mobilenet_v2"
+  input_size: [224, 224]
+  num_classes: 20
+  learning_rate: 1e-3
+  batch_size: 32
+  num_epochs: 30
+```
+
+## Data Paths
+```yaml
+paths:
+  data_dir: "data"
+  models_dir: "models"
+  vector_store_dir: "vector_store"
+  configs_dir: "configs"
+  evaluation_dir: "evaluation"
+  deployment_dir: "deployment"
+```
+
+## AWS Configuration
+```yaml
+aws:
+  instance_type: "g4dn.xlarge"
+  region: "us-east-1"
+  spot_instance: true
+  storage_size: 100  # GB
+  max_cost: 100  # USD
+```
+
+## Evaluation Metrics
+```yaml
+metrics:
+  slm_quality_threshold: 0.8
+  rag_precision_threshold: 0.7
+  cnn_accuracy_threshold: 0.85
+  max_latency_text: 3.0  # seconds
+  max_latency_image: 4.0  # seconds
+  max_memory_usage: 2.0  # GB
+  max_model_size: 500  # MB
+```

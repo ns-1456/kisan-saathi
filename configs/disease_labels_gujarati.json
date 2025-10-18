@@ -1,0 +1,91 @@
+# Kisan Saathi - Gujarati Disease Labels
+
+## Crop Disease Mappings
+
+### Cotton (કપાસ)
+```json
+{
+  "cotton_bacterial_blight": "કપાસ - બેક્ટેરિયલ બ્લાઇટ",
+  "cotton_curl_virus": "કપાસ - કર્લ વાયરસ",
+  "cotton_fusarium_wilt": "કપાસ - ફ્યુઝેરિયમ વિલ્ટ",
+  "cotton_healthy": "કપાસ - સ્વસ્થ",
+  "cotton_pink_bollworm": "કપાસ - ગુલાબી ઈયળ"
+}
+```
+
+### Groundnut (મગફળી)
+```json
+{
+  "groundnut_early_leaf_spot": "મગફળી - પ્રારંભિક પાનનો ડાઘ",
+  "groundnut_late_leaf_spot": "મગફળી - મોડો પાનનો ડાઘ",
+  "groundnut_healthy": "મગફળી - સ્વસ્થ",
+  "groundnut_rust": "મગફળી - રસ્ટ"
+}
+```
+
+### Wheat (ઘઉં)
+```json
+{
+  "wheat_brown_rust": "ઘઉં - બ્રાઉન રસ્ટ",
+  "wheat_healthy": "ઘઉં - સ્વસ્થ",
+  "wheat_septoria": "ઘઉં - સેપ્ટોરિયા",
+  "wheat_stripe_rust": "ઘઉં - સ્ટ્રાઇપ રસ્ટ"
+}
+```
+
+### Rice (ચોખા)
+```json
+{
+  "rice_bacterial_blight": "ચોખા - બેક્ટેરિયલ બ્લાઇટ",
+  "rice_brown_spot": "ચોખા - બ્રાઉન સ્પોટ",
+  "rice_healthy": "ચોખા - સ્વસ્થ",
+  "rice_leaf_blast": "ચોખા - પાનનો બ્લાસ્ટ"
+}
+```
+
+### Tomato (ટમેટા)
+```json
+{
+  "tomato_bacterial_spot": "ટમેટા - બેક્ટેરિયલ સ્પોટ",
+  "tomato_early_blight": "ટમેટા - પ્રારંભિક બ્લાઇટ",
+  "tomato_healthy": "ટમેટા - સ્વસ્થ",
+  "tomato_late_blight": "ટમેટા - મોડો બ્લાઇટ",
+  "tomato_leaf_mold": "ટમેટા - પાનનો મોલ્ડ"
+}
+```
+
+## Treatment Recommendations (Gujarati)
+
+### General Treatment Categories
+```json
+{
+  "fungicide": "ફંગાઇસાઇડ",
+  "insecticide": "કીટનાશક",
+  "bactericide": "બેક્ટેરિયાસાઇડ",
+  "organic_treatment": "જૈવિક ઉપચાર",
+  "cultural_practice": "સાંસ્કૃતિક પદ્ધતિ"
+}
+```
+
+### Common Chemicals (Gujarati Names)
+```json
+{
+  "copper_oxychloride": "કોપર ઓક્સીક્લોરાઇડ",
+  "mancozeb": "મેન્કોઝેબ",
+  "carbendazim": "કાર્બેન્ડાઝિમ",
+  "neem_oil": "નીમ તેલ",
+  "bordeaux_mixture": "બોર્ડો મિશ્રણ"
+}
+```
+
+## Usage Instructions
+
+This file contains Gujarati translations for:
+1. Disease names for CNN model predictions
+2. Treatment recommendations for RAG responses
+3. Chemical names for agricultural advice
+
+The mappings are used by:
+- CNN model for disease classification output
+- RAG system for generating Gujarati responses
+- Mobile app for displaying localized content
